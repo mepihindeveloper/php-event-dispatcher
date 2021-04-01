@@ -22,6 +22,11 @@ class Configuration implements ConfigurationInterface {
 	 */
 	protected array $settings;
 	
+	/**
+	 * Configuration constructor.
+	 *
+	 * @param array $settings Массив настроек
+	 */
 	public function __construct(array $settings) {
 		$this->settings = $settings;
 	}
