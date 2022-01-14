@@ -5,8 +5,8 @@
 [![PHP Version Require](http://poser.pugx.org/mepihindeveloper/php-configuration/require/php)](https://packagist.org/packages/mepihindeveloper/php-configuration)
 ![license](https://img.shields.io/github/license/mepihindeveloper/php-configuration)
 
-![build](https://github.com/mepihindeveloper/php-configuration/actions/workflows/php.yml/badge.svg?branch=development)
-[![codecov](https://codecov.io/gh/mepihindeveloper/php-configuration/branch/development/graph/badge.svg?token=36PP7VKHKG)](https://codecov.io/gh/mepihindeveloper/php-configuration)
+![build](https://github.com/mepihindeveloper/php-configuration/actions/workflows/php.yml/badge.svg?branch=stable)
+[![codecov](https://codecov.io/gh/mepihindeveloper/php-configuration/branch/stable/graph/badge.svg?token=36PP7VKHKG)](https://codecov.io/gh/mepihindeveloper/php-configuration)
 
 Компонент для работы с конфигурацией (настройками) приложения, модулей и компонентов
 
