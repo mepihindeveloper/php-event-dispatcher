@@ -4,11 +4,17 @@ declare(strict_types = 1);
 
 namespace mepihindeveloper\components;
 
+use mepihindeveloper\components\exceptions\EventNotFoundException;
 use mepihindeveloper\components\interfaces\ListenerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\EventDispatcher\ListenerProviderInterface;
 use Psr\EventDispatcher\StoppableEventInterface;
 
+/**
+ * Класс EventDispatcher
+ *
+ * Реализует логику работы с событиями
+ */
 class EventDispatcher implements EventDispatcherInterface {
 	
 	/** @var ListenerProviderInterface Провайдер слушателей событий */
@@ -30,7 +36,13 @@ class EventDispatcher implements EventDispatcherInterface {
 		}
 		
 		$eventListeners = $this->listenerProvider->getListenersForEvent($event);
-		$defaultEventListeners = $this->listenerProvider->getListenersForEventType($this->listenerProvider::DEFAULT_EVENT_TYPE);
+		
+		try {
+			$defaultEventListeners = $this->listenerProvider->getListenersForEventType($this->listenerProvider::DEFAULT_EVENT_TYPE);
+		} catch (EventNotFoundException $exception) {
+			$defaultEventListeners = [];
+		}
+		
 		$listeners = !empty($defaultEventListeners) ? array_merge($eventListeners, $defaultEventListeners) : $eventListeners;
 		
 		/** @var ListenerInterface $listener */

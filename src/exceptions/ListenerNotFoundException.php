@@ -6,6 +6,6 @@ namespace mepihindeveloper\components\exceptions;
 
 use Exception;
 
-class EventNotFoundException extends Exception {
+class ListenerNotFoundException extends Exception {
 	
 }

@@ -21,7 +21,7 @@ class Event implements StoppableEventInterface {
 	 *
 	 * @return void
 	 */
-	public function stopPropagation():void {
+	public function stopPropagation(): void {
 		$this->isPropagationStopped = true;
 	}
 	
@@ -29,6 +29,6 @@ class Event implements StoppableEventInterface {
 	 * @inheritDoc
 	 */
 	public function isPropagationStopped(): bool {
-		return  $this->isPropagationStopped;
+		return $this->isPropagationStopped;
 	}
 }
