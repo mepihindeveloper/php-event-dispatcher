@@ -1,38 +1,34 @@
-# php-configuration
+# php-event-dispatcher
 
-![release](https://img.shields.io/github/v/release/mepihindeveloper/php-configuration?label=version)
-[![Packagist Version](https://img.shields.io/packagist/v/mepihindeveloper/php-configuration)](https://packagist.org/packages/mepihindeveloper/php-configuration)
-[![PHP Version Require](http://poser.pugx.org/mepihindeveloper/php-configuration/require/php)](https://packagist.org/packages/mepihindeveloper/php-configuration)
-![license](https://img.shields.io/github/license/mepihindeveloper/php-configuration)
+![release](https://img.shields.io/github/v/release/mepihindeveloper/php-event-dispatcher?label=version)
+[![Packagist Version](https://img.shields.io/packagist/v/mepihindeveloper/php-event-dispatcher)](https://packagist.org/packages/mepihindeveloper/php-event-dispatcher)
+[![PHP Version Require](http://poser.pugx.org/mepihindeveloper/php-event-dispatcher/require/php)](https://packagist.org/packages/mepihindeveloper/php-event-dispatcher)
+![license](https://img.shields.io/github/license/mepihindeveloper/php-event-dispatcher)
 
-![build](https://github.com/mepihindeveloper/php-configuration/actions/workflows/php.yml/badge.svg?branch=development)
-[![codecov](https://codecov.io/gh/mepihindeveloper/php-configuration/branch/development/graph/badge.svg?token=36PP7VKHKG)](https://codecov.io/gh/mepihindeveloper/php-configuration)
+![build](https://github.com/mepihindeveloper/php-event-dispatcher/actions/workflows/php.yml/badge.svg?branch=development)
+[![codecov](https://codecov.io/gh/mepihindeveloper/php-event-dispatcher/branch/development/graph/badge.svg?token=36PP7VKHKG)](https://codecov.io/gh/mepihindeveloper/php-event-dispatcher)
 
-Компонент для работы с конфигурацией (настройками) приложения, модулей и компонентов
+Компонент для работы с событиями и слушателями
 
 # Структура
 
 ```
 src/
+--- exceptions/
+------ EventNotFoundException.php
 --- interfaces/
---- Configuration.php
+------ ListenerInterface.php
+--- Event.php
+--- EventDispatcher.php
+--- ListenerProvider.php
 ```
 
-В директории `interfaces` хранятся необходимые интерфейсы, которые необходимо имплементировать в при реализации
-собственного класса `Configuration`.
-
-Класс `Configuration` реализует интерфейс `ConfigurationInterface` для управления конфигурацией (настройками)
-приложения, модулей и компонентов.
 
 # Доступные методы
 
 | Метод                         | Аргументы                          | Возвращаемые данные | Исключения               | Описание                                                                                                                          |
 |-------------------------------|------------------------------------|---------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| __construct(array $settings)  | $settings Массив настроек          |                     |                          | Конструктор                                                                                                                       |
-| getSettings(): array          |                                    | array               |                          | Возвращает массив настроек                                                                                                        |
-| setSettings(array $settings)  | $settings Настройки [key => value] | void                |                          | Устанавливает настройку                                                                                                           |
-| getSettingsByKey(string $key) | $key Ключ                          | mixed               | InvalidArgumentException | Возвращает настройки по ключу. Здесь могут быть как отдельные настройки, так и массив настроек (например, для какой-то категории) |
-| hasKey(string $key)           | $key Ключ                          | bool                |                          | Проверяет наличие ключа в настройках                                                                                              |
+
 
 # Контакты
 
