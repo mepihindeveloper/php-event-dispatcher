@@ -5,8 +5,8 @@
 [![PHP Version Require](http://poser.pugx.org/mepihindeveloper/php-event-dispatcher/require/php)](https://packagist.org/packages/mepihindeveloper/php-event-dispatcher)
 ![license](https://img.shields.io/github/license/mepihindeveloper/php-event-dispatcher)
 
-![build](https://github.com/mepihindeveloper/php-event-dispatcher/actions/workflows/php.yml/badge.svg?branch=stable)
-[![codecov](https://codecov.io/gh/mepihindeveloper/php-event-dispatcher/branch/stable/graph/badge.svg?token=36PP7VKHKG)](https://codecov.io/gh/mepihindeveloper/php-event-dispatcher)
+![build](https://github.com/mepihindeveloper/php-event-dispatcher/actions/workflows/php.yml/badge.svg?branch=development)
+[![codecov](https://codecov.io/gh/mepihindeveloper/php-event-dispatcher/branch/development/graph/badge.svg?token=36PP7VKHKG)](https://codecov.io/gh/mepihindeveloper/php-event-dispatcher)
 
 Компонент для работы с событиями и слушателями
 
