@@ -13,6 +13,8 @@ use Psr\EventDispatcher\ListenerProviderInterface;
  * Класс ListenerProvider
  *
  * Реализует логику работы провайдера слушателей событий
+ *
+ * @package mepihindeveloper\components
  */
 class ListenerProvider implements ListenerProviderInterface {
 	
@@ -142,6 +144,7 @@ class ListenerProvider implements ListenerProviderInterface {
 	 * @param string $eventType Тип события
 	 *
 	 * @return array Массив слушателей события
+	 * @throws EventNotFoundException
 	 */
 	public function getListenersForEventType(string $eventType): array {
 		if (!$this->hasEventType($eventType)) {

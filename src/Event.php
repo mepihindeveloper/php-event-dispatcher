@@ -10,6 +10,8 @@ use Psr\EventDispatcher\StoppableEventInterface;
  * Класс Event
  *
  * Реализует логику работы события
+ *
+ * @package mepihindeveloper\components
  */
 class Event implements StoppableEventInterface {
 	

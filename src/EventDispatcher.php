@@ -14,6 +14,8 @@ use Psr\EventDispatcher\StoppableEventInterface;
  * Класс EventDispatcher
  *
  * Реализует логику работы с событиями
+ *
+ * @package mepihindeveloper\components
  */
 class EventDispatcher implements EventDispatcherInterface {
 	
