@@ -31,6 +31,8 @@ class EventDispatcher implements EventDispatcherInterface {
 	
 	/**
 	 * @inheritDoc
+	 *
+	 * @throws EventNotFoundException
 	 */
 	public function dispatch(object $event) {
 		if ($event instanceof StoppableEventInterface && $event->isPropagationStopped()) {
