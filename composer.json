@@ -1,14 +1,15 @@
 {
-	"name": "mepihindeveloper/php-configuration",
-	"description": "Component for working with settings",
+	"name": "mepihindeveloper/php-event-dispatcher",
+	"description": "Component for working with events",
 	"type": "library",
 	"license": "MIT",
 	"keywords": [
 		"component",
 		"class",
 		"php",
-		"settings",
-		"configuration"
+		"event",
+		"dispatcher",
+		"listner"
 	],
 	"authors": [
 		{
@@ -17,7 +18,8 @@
 		}
 	],
 	"require": {
-		"php": ">=7.4"
+		"php": ">=7.4",
+		"psr/event-dispatcher": "^1.0"
 	},
 	"autoload": {
 		"psr-4": {
