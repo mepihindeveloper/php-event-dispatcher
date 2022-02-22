@@ -133,6 +133,7 @@ class ListenerProvider implements ListenerProviderInterface {
 	
 	/**
 	 * @inheritDoc
+	 * @throws EventNotFoundException
 	 */
 	public function getListenersForEvent(object $event): iterable {
 		return $this->getListenersForEventType(get_class($event));
